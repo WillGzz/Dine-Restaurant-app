@@ -2,7 +2,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 2;
-
+   /* font-family: "League Spartan"; */
 }
 
 body{
@@ -26,21 +26,47 @@ header{
 header .dining{
   top: 210px;
   color: white;
+  text-align: center;
+  font-family: "League Spartan";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
 
 }
 
 .dining img{
   margin-top: 25px;
-
+  height: 2em;
+  margin-bottom: 15px;
+  
 }
 
+.dining h2{
+  
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.dining p{
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 26px;
+  width: 90%;
+  
+}
 .dining button{
   background-color: black;
-  padding: 10px;
-  width: 150px;
+  padding: 2em;
+  height: auto;
+  width: 65%;
   border-radius: 1px;
   border-color: white;
-
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
 }
 
 .dining button a{
@@ -48,8 +74,8 @@ header .dining{
   text-decoration: none;
 }
 
-.dining img, .dining h2, .dining p, .dining button{
-  margin-bottom: 30px;
+.dining h2, .dining p, .dining button{
+  margin-bottom: 25px;
 }
 
 .home .enjoyable-place{
