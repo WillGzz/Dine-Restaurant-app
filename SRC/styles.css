@@ -26,14 +26,7 @@ header{
 header .dining{
   top: 210px;
   color: white;
-  text-align: center;
   font-family: "League Spartan";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  
-
 }
 
 .dining img{
@@ -54,6 +47,8 @@ header .dining{
   font-weight: 300;
   line-height: 26px;
   width: 90%;
+  left: 15px;
+  margin-bottom: 40px;
   
 }
 .dining button{
@@ -61,8 +56,9 @@ header .dining{
   padding: 2em;
   height: auto;
   width: 65%;
-  border-radius: 1px;
+  border-style: solid;
   border-color: white;
+  border-width: thin;
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -74,11 +70,18 @@ header .dining{
   text-decoration: none;
 }
 
-.dining h2, .dining p, .dining button{
-  margin-bottom: 25px;
-}
 
 .home .enjoyable-place{
-  bottom: 50px;
+  bottom: 67px;
+  
 }
 
+.enjoyable-place img{
+  width: 90%;  
+  box-shadow: 0px 6px 10px 2px rgb(0, 0, 0, 0.5);  /*Horizontal size, vertical size , blur size, shadow spread size and color */
+
+}
+.enjoyable-place .pattern-divider{
+
+  margin-top: 30px;
+}
