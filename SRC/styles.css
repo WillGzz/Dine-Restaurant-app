@@ -1,15 +1,25 @@
 *{
-    box-sizing: border-box;
-    position: relative;
-    z-index: 2;
-   /* font-family: "League Spartan"; */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  font-family: "League Spartan";
+}
+
+p{
+  line-height: 26px;
+  width: 327px;  
+  left: 15px;
+  
 }
 
 body{
   background-color: white;
-  text-align: center;
   margin-left: 1px;
   margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   text-align: center;
  
 }
 
@@ -26,7 +36,7 @@ header{
 header .dining{
   top: 210px;
   color: white;
-  font-family: "League Spartan";
+
 }
 
 .dining img{
@@ -45,13 +55,11 @@ header .dining{
 .dining p{
   font-size: 1rem;
   font-weight: 300;
-  line-height: 26px;
   width: 90%;
-  left: 15px;
   margin-bottom: 40px;
   
 }
-.dining button{
+.dining button, .Events button{
   background-color: black;
   padding: 2em;
   height: auto;
@@ -65,9 +73,10 @@ header .dining{
   
 }
 
-.dining button a{
+.dining button a, .Events button a, .Reservation button a{
   color: white;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 
@@ -76,12 +85,79 @@ header .dining{
   
 }
 
-.enjoyable-place img{
-  width: 90%;  
-  box-shadow: 0px 6px 10px 2px rgb(0, 0, 0, 0.5);  /*Horizontal size, vertical size , blur size, shadow spread size and color */
+.home h2{
+  font-size: 2rem;
+  font-weight: bold;
 
 }
-.enjoyable-place .pattern-divider{
+
+.home p{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.home img{
+  /* width: 90%;   */
+  box-shadow: 0px 10px 25px 0px rgb(0, 0, 0, 0.5);  /*Horizontal size, vertical size , blur size, shadow spread size and color */
+  
+}
+.home .pattern-divider{
 
   margin-top: 30px;
+}
+
+.Menu{
+ background-color: black;
+ color: white;
+ padding: 20px 0px;
+ margin-top: 100px;
+}
+
+hr{
+  width: 327px;
+  border-color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  /* <hr> element is essentially a horizontal line created by a border. so we need to use border 
+  property to style it*/
+}
+
+.Events{
+  margin-top: 80px;
+}
+
+.Events h2{
+  cursor: pointer;
+}
+
+.Reservation{
+  background-image: url('./images/homepage/ready-bg-mobile@2x.jpg');
+  background-size: 100% 100%;   /*width height  */
+  background-repeat: no-repeat;
+  height: 328px;
+  width: auto;
+  z-index: 1;
+}
+
+.Reservation div{
+ top: 130px;
+ color: white;
+}
+
+.Reservation button{
+  background-color: transparent;
+  padding: 2em;
+  height: auto;
+  width: 65%;
+  border-style: solid;
+  border-color: white;
+  border-width: thin;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
 }
