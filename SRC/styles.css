@@ -5,24 +5,16 @@
   font-family: "League Spartan";
 }
 
-p{
-  line-height: 26px;
-  width: 327px;  
-  left: 15px;
-  
-}
 
 body{
   background-color: white;
-  margin-left: 1px;
-  margin-top: 1px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-   text-align: center;
+  text-align: center;
  
 }
-
 
 header{
   background-image: url("./images/homepage/hero-bg-mobile@2x.jpg");
@@ -47,18 +39,27 @@ header .dining{
 }
 
 .dining h2{
-  
+  line-height: 40px;
   font-weight: lighter;
   font-size: 2rem;
 }
 
-.dining p{
+
+.dining p, .home p, .Menu p, .Events p{
+  line-height: 26px;
+  width: 327px;  
+  left: 15px;
   font-size: 1rem;
+  
+}
+
+.dining p{
   font-weight: 300;
   width: 90%;
   margin-bottom: 40px;
   
 }
+
 .dining button, .Events button{
   background-color: black;
   padding: 2em;
@@ -85,10 +86,11 @@ header .dining{
   
 }
 
-.home h2{
+.home h2, .Menu h2, .Reservation h2{
   font-size: 2rem;
   font-weight: bold;
-
+  line-height: 40px;
+  
 }
 
 .home p{
@@ -109,9 +111,26 @@ header .dining{
 .Menu{
  background-color: black;
  color: white;
- padding: 20px 0px;
+ padding: 50px 0px;
  margin-top: 100px;
 }
+ 
+.Menu h3{
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+.Menu #salmon-img{
+  margin-top: 50px;
+
+}
+
+.salmon p, .beef p, .Chocolate p{
+  bottom: 10px;
+  height: 78px;
+  
+}
+
+
 
 hr{
   width: 327px;
@@ -125,7 +144,7 @@ hr{
   margin-top: 80px;
 }
 
-.Events h2{
+.Events h3{
   cursor: pointer;
 }
 
@@ -139,8 +158,11 @@ hr{
 }
 
 .Reservation div{
- top: 130px;
+ top: 65px;
  color: white;
+}
+.Reservation h2{
+  top: 15px;
 }
 
 .Reservation button{
@@ -157,6 +179,7 @@ hr{
 }
 
 footer {
+  height: 440px;
   width: 100%;
   background-color: black;
   color: white;
