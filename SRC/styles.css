@@ -62,8 +62,11 @@ header .dining{
 
 .dining button, .Events button{
   background-color: black;
-  padding: 2em;
+  padding: 1.5em;
   height: auto;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
   width: 65%;
   border-style: solid;
   border-color: white;
@@ -74,12 +77,14 @@ header .dining{
   cursor: pointer;
   
 }
+.dining button:hover, .Events button:hover, .Reservation button:hover{
+   background-color: white;
+   color: black;
+ }
 
-.dining button a, .Events button a, .Reservation button a{
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
+ .Events button:hover{
+  border-color: black;
+ }
 
 
 .home .enjoyable-place{
@@ -224,9 +229,12 @@ hr{
 
 .Reservation button{
   background-color: transparent;
-  padding: 2em;
+  padding: 1.5em;
   height: auto;
   width: 65%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
   border-style: solid;
   border-color: white;
   border-width: thin;
