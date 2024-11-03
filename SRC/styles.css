@@ -71,6 +71,7 @@ header .dining{
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  cursor: pointer;
   
 }
 
@@ -98,14 +99,14 @@ header .dining{
   text-align: center;
 }
 
-.home img{
+.home img, .Events img{
   /* width: 90%;   */
   box-shadow: 0px 10px 25px 0px rgb(0, 0, 0, 0.5);  /*Horizontal size, vertical size , blur size, shadow spread size and color */
   
 }
 .home .pattern-divider{
 
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .Menu{
@@ -130,8 +131,6 @@ header .dining{
   
 }
 
-
-
 hr{
   width: 327px;
   border-color: rgb(0, 0, 0);
@@ -144,10 +143,68 @@ hr{
   margin-top: 80px;
 }
 
-.Events h3{
-  cursor: pointer;
+.Events img{
+   margin-bottom: 25px;
 }
 
+.Events h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#title1.color {
+  color: black; /* Start "Family Gathering" in black */
+}
+
+#title1::after{
+  content: "";
+  position: absolute;
+  left: 42.9%;
+  bottom: -3px;
+  width: 48px;
+  height: 0.9px;
+  background-color:  rgb(158, 127, 102);
+  opacity: 1; /* Hide underline by default */
+}
+#title1.underline-active2::after {
+  opacity: 0; /* Show underline */
+}
+
+.Events .event-title{
+  font-weight: 600;
+  color: rgb(92, 103, 121);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+
+}
+
+.Events .event-title.active, .event-title:hover {
+  color: rgb(17, 17, 17);
+}
+
+
+.event-title::after {
+  content: "";
+  position: absolute;
+  left: 42.9%;
+  bottom: -3px;
+  width: 48px;
+  height: 0.9px;
+  background-color:  rgb(158, 127, 102);
+  opacity: 0; /* Hide underline by default */
+}
+
+.event-title.underline-active::after {
+  opacity: 1; /* Show underline when the class is active */
+}
+
+.Events button{
+ margin-bottom: 100px;
+
+}
 .Reservation{
   background-image: url('./images/homepage/ready-bg-mobile@2x.jpg');
   background-size: 100% 100%;   /*width height  */
@@ -176,6 +233,7 @@ hr{
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
 footer {
@@ -183,4 +241,26 @@ footer {
   width: 100%;
   background-color: black;
   color: white;
+}
+
+footer .content{
+  margin-top: 70px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+
+}
+
+.content img{
+  margin-bottom: 15px;
+}
+
+.content p{
+  margin-bottom: 25px;
+}
+
+.content h4{
+  margin: 0px;
+  font-weight: 400;
 }
