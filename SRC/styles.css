@@ -227,7 +227,7 @@ hr{
   top: 15px;
 }
 
-.Reservation button{
+.Reservation button,  .Reservation-Home button{
   background-color: transparent;
   padding: 1.5em;
   height: auto;

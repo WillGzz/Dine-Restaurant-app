@@ -7,56 +7,63 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="booking.css">
 
   <title>Dine Restaurant</title>
 </head>
 
 <body>
 
-  <header class="logo">
+  <header class="booking">
     <figure>
-      <img src="/SRC/images/logo.svg" alt="logo">
+      <img src="./images/logo.svg" alt="logo">
     </figure>
+     
+    <div class="Reservation-Home">
+      <h1>Reservations</h1>
+  
+      <p>
+        We can’t wait to host you. If you have any special requirements please feel free to
+        call on the phone number below. We’ll be happy to accommodate you.
+      </p>
+
+      <button onclick="window.location.href='/dine-restaurant-website/index.html';">Reserve Place</button>
+       
+    </div>
 
   </header>
   <main>
 
-      <section id="Reservation-Home">
-        <h1>Reservations</h1>
-    
-        <p>
-          We can’t wait to host you. If you have any special requirements please feel free to
-          call on the phone number below. We’ll be happy to accommodate you.
-        </p>
-
-      </section>
-
-
-    <section id="Reservation-Form">
-      <!-- Figure this out later.... -->
-      Name
-      Email
-      Pick a date
-      Pick a time
+    <section class="Reservation-Form">
+      <form >
+      
+        <label for="name">Name</label>
+         <input type="text" name="name">
+        <label for="emai">Email</label>
+         <input type="text">
+        
+        Pick a date
+        Pick a time
+      </form>
 
       <button>Make Reservation</button>
     </section>
   </main>
   <footer>
+    <div class="content">
+      
+      <figure>
+          <img src="./images/logo.svg" alt="dine-logo">
+        </figure>
 
-    <figure>
-      <img src="/SRC/images/logo.svg" alt="logo">
-    </figure>
-
-    <p>
-      Marthwaite, Sedbergh
-      Cumbria
-      +00 44 123 4567
-    </p>
-
-    <h4>Open Times</h4>
-    <h4> Mon - Fri: 09:00 AM - 10:00 PM</h4>
-    <h4> Sat - Sun: 09:00 AM - 11:30 PM</h4>
+        <p>
+          Marthwaite, Sedbergh <br> Cumbria <br>  +00 44 123 4567
+        </p>
+        
+        <h4>Open Times</h4>
+        <h4> Mon - Fri: 09:00 AM - 10:00 PM</h4>
+        <h4> Sat - Sun: 09:00 AM - 11:30 PM</h4>
+    </div>
   </footer>
 
 </body>
