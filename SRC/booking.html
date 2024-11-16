@@ -24,7 +24,7 @@
   
       <p>
         We can’t wait to host you. If you have any special requirements please feel free to
-        call on the phone number below. We’ll be happy to accommodate you.
+        call on the phone number below. We’ll be happy to accommodate <br> you.
       </p>
 
       <button onclick="window.location.href='/dine-restaurant-website/index.html';">Reserve Place</button>
@@ -34,19 +34,29 @@
   </header>
   <main>
 
-    <section class="Reservation-Form">
-      <form >
-      
-        <label for="name">Name</label>
-         <input type="text" name="name">
-        <label for="emai">Email</label>
-         <input type="text">
-        
-        Pick a date
-        Pick a time
+    <section class="Make-Reservation">
+      <form>
+        <div class="form-content">
+          <input class="input-name" type="text" name="name"  placeholder="Name">
+    
+          <input class="input-email" type="text" placeholder="Email">
+          
+          <div id="pick-date-div">
+            <label for="reservation-date">Pick a date</label>
+            <input type="date" name="reservation-date" id="reservation-date">
+          </div>
+          
+          <div id="pick-time-div">
+            <label for="time">Pick a time</label>
+            <input type="time" name="reservation-time" id="reservation-time">
+          </div>
+
+          <input class="input-people" type="text" placeholder="4 people">
+          
+          <button>Make Reservation</button>
+        </div>
       </form>
 
-      <button>Make Reservation</button>
     </section>
   </main>
   <footer>

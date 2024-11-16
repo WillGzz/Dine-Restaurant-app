@@ -77,12 +77,13 @@ header .dining{
   cursor: pointer;
   
 }
-.dining button:hover, .Events button:hover, .Reservation button:hover{
+.dining button:hover, .Events button:hover, .Reservation button:hover,
+ .Reservation-Home button:hover{
    background-color: white;
    color: black;
  }
 
- .Events button:hover{
+ .Events button:hover{ 
   border-color: black;
  }
 
