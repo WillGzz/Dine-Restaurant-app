@@ -37,22 +37,32 @@
     <section class="Make-Reservation">
       <form>
         <div class="form-content">
-          <input class="input-name" type="text" name="name"  placeholder="Name">
+          <input class="input-name" type="text" name="name"  placeholder="Name" required>
     
-          <input class="input-email" type="text" placeholder="Email">
+          <input class="input-email" type="email" placeholder="Email" required>
           
           <div id="pick-date-div">
             <label for="reservation-date">Pick a date</label>
-            <input type="date" name="reservation-date" id="reservation-date">
+            <input type="text" id="input-month" placeholder="MM" maxlength="2">
+            <input type="text" id="input-day" placeholder="DD" maxlength="2">
+            <input type="text" id="input-year" placeholder="YYYY" maxlength="4">
           </div>
           
           <div id="pick-time-div">
             <label for="time">Pick a time</label>
-            <input type="time" name="reservation-time" id="reservation-time">
+            <input type="text" id="input-hour" placeholder="00" maxlength="2">
+            <input type="text" id="input-minute" placeholder="00" maxlength="2">
+            <input type="text" id="input-time-of-day" placeholder="AM" maxlength="4">
           </div>
-
-          <input class="input-people" type="text" placeholder="4 people">
-          
+          <div>
+            <img src="./images/icons/icon-minus.svg" alt="minus-sign" id="minus-sign">
+            <img src="./images/icons/icon-plus.svg" alt="plus-sign" id="plus-sign">  
+          </div>
+          <div class="number-of-people">
+            <span>0</span>
+              <span class="people">people</span>
+            </div>
+              <hr>     
           <button>Make Reservation</button>
         </div>
       </form>
@@ -61,10 +71,9 @@
   </main>
   <footer>
     <div class="content">
-      
       <figure>
           <img src="./images/logo.svg" alt="dine-logo">
-        </figure>
+      </figure>
 
         <p>
           Marthwaite, Sedbergh <br> Cumbria <br>  +00 44 123 4567
@@ -75,7 +84,7 @@
         <h4> Sat - Sun: 09:00 AM - 11:30 PM</h4>
     </div>
   </footer>
-
+  <script defer src="./booking.js"></script>
 </body>
 
 </html>

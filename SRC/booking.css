@@ -42,17 +42,52 @@
   align-items: center;
   height:100%;
   margin-bottom: 20px;
-
 }
-
 
 .form-content input{
-  height: 43px;
-  width: 80%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: thin;
+  outline: none;
 }
 
-.form-content .input-name, .form-content .input-email, .form-content .input-people{
+.form-content .input-name, .form-content .input-email{
+  height: 43px;
+  width: 80%;
+  font-size: 1.15rem;
+  text-indent: 16px;
+  caret-color: #9E7F66;
+ 
+}
+
+.form-content .input-name::placeholder, .form-content .input-email::placeholder{
+  position: relative;
+  font-size: 1.1rem;
+  bottom: 5px;
+}
+
+.form-content .input-name, .form-content .input-email{
   margin-top: 30px;
+}
+
+#input-day, #input-month, #input-year, #input-hour, #input-minute, #input-time-of-day{
+  height: 43px;
+  width: 22%;
+  margin-right: 20px;
+  left: 8px;
+
+}
+
+#input-time-of-day, #input-year{
+  
+}
+
+#input-day::placeholder, #input-month::placeholder, #input-year::placeholder, #input-hour::placeholder, 
+#input-minute::placeholder,  #input-year::placeholder, #input-time-of-day::placeholder{
+  
+ text-indent: 5px;
+  font-size: 1.1rem;
 }
 
 .form-content #pick-date-div, .form-content #pick-time-div{
@@ -62,10 +97,39 @@
 
 #pick-date-div label, #pick-time-div label{
   right: 95px;
+  display: block;
+  font-size: 1.1rem;
+  color: black;
 }
 
-.form-content label{
-  align-items: baseline;
+.form-content .number-of-people{
+  height: auto;
+  width: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+div #minus-sign, div #plus-sign{
+  top: 20px;
+  cursor: pointer;
+  height: auto;
+  width: 12px;
+ 
+}
+div #minus-sign{
+  right: 99px;
+  margin-right: 0px;
+}
+
+div #plus-sign{
+   left: 99px;
+}
+
+.form-content hr{
+  border-color: rgb(225, 222, 222);
+  border-width: thin;
+  width: 263px;
+  margin-top: 20px;
 }
 
 .form-content button{
