@@ -5,7 +5,6 @@
   font-family: "League Spartan";
 }
 
-
 body{
   background-color: white;
   margin: 0px;
@@ -13,10 +12,9 @@ body{
   flex-direction: column;
   align-items: center;
   text-align: center;
- 
 }
 
-header{
+ header{
   background-image: url("./images/homepage/hero-bg-mobile@2x.jpg");
   background-size: 100% 100%;   /*width height  */
   background-repeat: no-repeat;
@@ -28,7 +26,6 @@ header{
 header .dining{
   top: 210px;
   color: white;
-
 }
 
 .dining img{
@@ -44,13 +41,11 @@ header .dining{
   font-size: 2rem;
 }
 
-
 .dining p, .home p, .Menu p, .Events p{
   line-height: 26px;
   width: 327px;  
   left: 15px;
   font-size: 1rem;
-  
 }
 
 .dining p{
@@ -77,8 +72,7 @@ header .dining{
   cursor: pointer;
   
 }
-.dining button:hover, .Events button:hover, .Reservation button:hover,
- .Reservation-Home button:hover{
+.dining button:hover, .Events button:hover, .Reservation button:hover{
    background-color: white;
    color: black;
  }
@@ -217,7 +211,7 @@ hr{
   background-repeat: no-repeat;
   height: 328px;
   width: auto;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .Reservation div{
@@ -228,7 +222,7 @@ hr{
   top: 15px;
 }
 
-.Reservation button,  .Reservation-Home button{
+.Reservation button{
   background-color: transparent;
   padding: 1.5em;
   height: auto;

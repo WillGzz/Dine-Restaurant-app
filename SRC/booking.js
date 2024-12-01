@@ -1,6 +1,6 @@
 const minuSign = document.getElementById('minus-sign');
 const plusSign = document.getElementById('plus-sign');
-const numPeopleSpan = document.getElementsByTagName('span')[0];//the first span element
+const numPeopleSpan = document.querySelector('.number-of-people span');
 
 function countPeople(event) {
     let numPeople = parseInt(numPeopleSpan.textContent); // Convert the text content to an integer
@@ -17,6 +17,7 @@ function countPeople(event) {
             numPeopleSpan.textContent = numPeople;
             // console.log(numPeople);
         }
+        
     }
 }
 
