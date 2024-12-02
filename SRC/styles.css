@@ -163,10 +163,11 @@ hr{
   left: 42.9%;
   bottom: -3px;
   width: 48px;
-  height: 0.9px;
+  height: 1.2px;
   background-color:  rgb(158, 127, 102);
   opacity: 1; /* Hide underline by default */
 }
+
 #title1.underline-active2::after {
   opacity: 0; /* Show underline */
 }
@@ -192,7 +193,7 @@ hr{
   left: 42.9%;
   bottom: -3px;
   width: 48px;
-  height: 0.9px;
+  height: 1.2px;
   background-color:  rgb(158, 127, 102);
   opacity: 0; /* Hide underline by default */
 }

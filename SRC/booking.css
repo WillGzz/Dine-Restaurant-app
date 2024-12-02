@@ -124,12 +124,17 @@ body{
 }
 
 
-
-#dropdown-arrow{
+.dropdown-arrow{
   position: absolute;
   cursor: pointer;
   top: 35px;
   right: 40px;
+  transition: 0.3s ease;
+
+}
+
+.dropdown-arrow-rotate{
+  transform: rotate(180deg);
 }
 
 .dropdown{
@@ -143,7 +148,7 @@ body{
   margin-top: 5px;
   left: 215px;
   z-index: 2;
-  display: none;
+  visibility: hidden;
 } 
 
 .dropdown span{
@@ -151,6 +156,20 @@ body{
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+}
+
+.dropdown-view{
+  visibility: visible;
+}
+
+.dropdown #am-check, .dropdown #pm-check{
+  right: 7px;
+}
+
+
+#pm-check{
+  visibility: hidden;
+
 }
 
 .dropdown .pm{
