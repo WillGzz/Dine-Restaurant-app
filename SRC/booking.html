@@ -34,14 +34,16 @@
   <main>
 
     <section class="Make-Reservation">
-      <form>
+      <form onsubmit="formValidation(event)"> 
         <div class="form-content">
-          <input class="input-name" type="text" name="name"  placeholder="Name" required>
+          <input class="input-name" type="text" name="name"  placeholder="Name">
+          <span class="name-error"> </span>
     
-          <input class="input-email" type="email" placeholder="Email" required>
-          
+          <input class="input-email" type="email" placeholder="Email">
+          <span class="email-error"></span>
           <div id="pick-date-div">
             <label for="reservation-date">Pick a date</label>
+            <span class="date-error"></span>
             <input min="0"  type="number" id="input-month" placeholder="MM" max="12"  oninput="validity.valid||(value='');">
             <input min="0" type="number" id="input-day" placeholder="DD" max="31"  oninput="validity.valid||(value='');">
             <input  min="1" type="number" id="input-year" placeholder="YYYY" max="2100"  oninput="validity.valid||(value='');">
@@ -49,14 +51,14 @@
           
           <div id="pick-time-div">
             <label for="time">Pick a time</label>
+            <span class="time-error"></span>
             <input min="0" type="number" id="input-hour"  placeholder="00" max="12"  oninput="validity.valid||(value='');">
             <input min="0" type="number" id="input-minute" placeholder="00" max="59"  oninput="validity.valid||(value='');">
             <input disabled type="text"  id="input-time-of-day" placeholder="AM" maxlength="2">
             <img  class="dropdown-arrow" src="./images/icons/icon-arrow.svg" alt="icon-arrow">
-            <!-- <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 1l8 8 8-8"/></svg> -->
             <div class="dropdown">
-              <span class="am"><img id="am-check" src="./images/icons/icon-check.svg" alt="">AM</span>
-              <span class="pm"><img  id="pm-check"  src="./images/icons/icon-check.svg" alt="PM">PM</span>
+              <span class="am"><img class="am-check" src="./images/icons/icon-check.svg" alt="">AM</span>
+              <span class="pm"><img class="pm-check" src="./images/icons/icon-check.svg" alt="">PM</span>
             </div>
           </div>   
           <div>
@@ -68,7 +70,7 @@
               <span class="people">people</span>
             </div>
               <hr>     
-          <button>Make Reservation</button>
+          <button type="submit">Make Reservation</button>
         </div>
       </form>
 

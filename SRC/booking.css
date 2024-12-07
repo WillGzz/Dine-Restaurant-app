@@ -78,7 +78,7 @@ body{
 .form-content .input-name, .form-content .input-email{
   height: 43px;
   width: 80%;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   text-indent: 16px;
   caret-color: #9E7F66;
 }
@@ -162,14 +162,22 @@ body{
   visibility: visible;
 }
 
-.dropdown #am-check, .dropdown #pm-check{
+.dropdown .am-check, .dropdown .pm-check{
   right: 7px;
 }
 
-
-#pm-check{
+.pm-check{
   visibility: hidden;
+}
+.pm-check-visible{
+  position: relative;
+  visibility: visible;
+  
 
+}
+
+.am-check-hidden{
+  visibility: hidden;
 }
 
 .dropdown .pm{
