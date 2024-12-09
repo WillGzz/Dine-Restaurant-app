@@ -37,13 +37,14 @@
       <form onsubmit="formValidation(event)"> 
         <div class="form-content">
           <input class="input-name" type="text" name="name"  placeholder="Name">
-          <span class="name-error"> </span>
+          <span id="name-error"> </span>
     
           <input class="input-email" type="email" placeholder="Email">
-          <span class="email-error"></span>
+          <span id="email-error"></span>
+
           <div id="pick-date-div">
             <label for="reservation-date">Pick a date</label>
-            <span class="date-error"></span>
+            <span id="date-error"></span>
             <input min="0"  type="number" id="input-month" placeholder="MM" max="12"  oninput="validity.valid||(value='');">
             <input min="0" type="number" id="input-day" placeholder="DD" max="31"  oninput="validity.valid||(value='');">
             <input  min="1" type="number" id="input-year" placeholder="YYYY" max="2100"  oninput="validity.valid||(value='');">
@@ -51,9 +52,9 @@
           
           <div id="pick-time-div">
             <label for="time">Pick a time</label>
-            <span class="time-error"></span>
-            <input min="0" type="number" id="input-hour"  placeholder="00" max="12"  oninput="validity.valid||(value='');">
-            <input min="0" type="number" id="input-minute" placeholder="00" max="59"  oninput="validity.valid||(value='');">
+            <span id="time-error"></span>
+            <input class="time-inputs" min="0" type="number" id="input-hour"  placeholder="00" max="12"  oninput="validity.valid||(value='');">
+            <input class="time-inputs" min="0" type="number" id="input-minute" placeholder="00" max="59"  oninput="validity.valid||(value='');">
             <input disabled type="text"  id="input-time-of-day" placeholder="AM" maxlength="2">
             <img  class="dropdown-arrow" src="./images/icons/icon-arrow.svg" alt="icon-arrow">
             <div class="dropdown">

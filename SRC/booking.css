@@ -65,8 +65,13 @@ body{
   border-width: thin;
   outline: none;
   font-family: "arial";
-  
+  border-bottom-color:rgb(185, 185, 185);
 }
+
+.form-content input:not(:placeholder-shown){
+  border-bottom-color: rgb(0, 0, 0);
+}
+
 
 .form-content input[type=number]::-webkit-inner-spin-button,
 .form-content input[type=number]::-webkit-outer-spin-button {
@@ -81,21 +86,42 @@ body{
   font-size: 1.1rem;
   text-indent: 16px;
   caret-color: #9E7F66;
+  margin-top: 30px;
 }
 
 .form-content .input-name::placeholder, .form-content .input-email::placeholder{
   position: relative;
   font-size: 1.1rem;
   bottom: 5px;
-}
-
-.form-content .input-name, .form-content .input-email{
-  margin-top: 30px;
+  color: var(--placeholder-color, gray);
 }
 
 .form-content .input-email{
   margin-bottom: 20px;
 }
+
+#name-error, #email-error, #time-error, #date-error{
+  position: absolute;
+ color: #B54949;
+ font-size: 0.7rem;
+}
+
+#name-error{
+ top: 80px; 
+ right: 185px;
+}
+
+#email-error{
+  top: 152px;
+  right: 185px;
+}
+
+#time-error, #date-error{
+  top: 70px;
+  left: 30px;  
+}
+
+
 
 #input-day, #input-month, #input-year, #input-hour, #input-minute, #input-time-of-day{
   height: 43px;
@@ -104,6 +130,10 @@ body{
   left: 8px;
   font-size: 1.1rem;
   text-indent: 15px;
+}
+
+#input-day::placeholder, #input-month::placeholder, #input-year::placeholder, #input-hour::placeholder, #input-minute::placeholder{
+  color: var(--placeholder-color, gray);
 }
 
 #input-year{
@@ -122,7 +152,6 @@ body{
   text-indent: 12px;
   color: black;
 }
-
 
 .dropdown-arrow{
   position: absolute;
@@ -169,11 +198,10 @@ body{
 .pm-check{
   visibility: hidden;
 }
+
 .pm-check-visible{
   position: relative;
   visibility: visible;
-  
-
 }
 
 .am-check-hidden{

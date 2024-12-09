@@ -68,60 +68,95 @@ function bookingDropdown(event) {  //event.target refers to the element that act
 }
 
 function formValidation(event){
-  
-    event.preventDefault();
+
   
     let isValid = true;
 
-    const name = document.querySelector('.input-name').value;
+    const name = document.querySelector('.input-name');
     const nameError = document.getElementById('name-error');
-    if (!name) {
+    if (!name.value) {
       nameError.textContent = "This field is required";
-      nameError.style.color = "red";
+      name.style.setProperty("--placeholder-color", "#B54949");
+      name.style.borderBottomColor = "#B54949";
+
       isValid = false;
     } else {
       nameError.textContent = "";
+      name.style.setProperty("--placeholder-color", "");
+      name.style.borderBottomColor = "";
     }
 
-    const email = document.querySelector('.input-email').value;
+    const email = document.querySelector('.input-email');
     const emailError = document.getElementById('email-error');
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!email) {
+    
+    if (!email.value) {
       emailError.textContent = "This field is required";
-      emailError.style.color = "red";
-      isValid = false;
-    } else if (!email.match(emailPattern)) {
-      emailError.textContent = "Please use a valid email address";
-      emailError.style.color = "red";
+      email.style.setProperty("--placeholder-color", "#B54949");
+      email.style.borderBottomColor = "#B54949";
       isValid = false;
     } else {
       emailError.textContent = "";
+      email.style.setProperty("--placeholder-color", "");
+      email.style.borderBottomColor = "";
     }
 
-    const month = document.getElementById('input-month').value;
-    const day = document.getElementById('input-day').value;
-    const year = document.getElementById('input-year').value;
+    const month = document.getElementById('input-month');
+    const day = document.getElementById('input-day');
+    const year = document.getElementById('input-year');
     const dateError = document.getElementById('date-error');
-    if (!month || !day || !year) {
+    const pickDateInputs = document.querySelectorAll("#pick-date-div input");
+
+    if (!month.value && !day.value && !year.value) {
+      dateError.textContent = "This field is required";
+      setInputStyles(pickDateInputs); 
+      isValid = false;
+    } 
+    else if(!month.value || !day.value || !year.value){
       dateError.textContent = "This field is incomplete";
-      dateError.style.color = "red";
-      isValid = false;
-    } else {
-      dateError.textContent = "";
+
+    }
+    else{
+      resetInputStyles(pickDateInputs, dateError);
     }
 
-    
-    const hour = document.getElementById('input-hour').value;
-    const minute = document.getElementById('input-minute').value;
+   
+    const hour = document.getElementById('input-hour');
+    const minute = document.getElementById('input-minute');
     const timeError = document.getElementById('time-error');
-    if (!hour || !minute) {
-      timeError.textContent = "This field is incomplete";
-      timeError.style.color = "red";
+    const pickTimeInputs = document.querySelectorAll("#pick-time-div .time-inputs");
+    
+    if (!hour.value && !minute.value) {
+      timeError.textContent = "This field is required";
+      setInputStyles(pickTimeInputs);
       isValid = false;
-    } else {
-      timeError.textContent = "";
+    } 
+    else if(!hour.value || !minute.value){
+      timeError.textContent = "This field is incomplete";      
+    }
+    else{
+       resetInputStyles(pickTimeInputs, timeError);
     }
 
+    if (!isValid) {
+      event.preventDefault();
+    }
+
+}
+
+function setInputStyles(inputDiv){
+  inputDiv.forEach(input =>{
+    input.style.setProperty("--placeholder-color", "#B54949");
+    input.style.borderBottomColor = "#B54949";
+});
+}
+
+function resetInputStyles(inputDiv, errorMessage){
+  errorMessage.textContent = "";
+  inputDiv.forEach(input =>{
+    input.style.setProperty("--placeholder-color", "");
+    input.style.borderBottomColor = "";
+});
+   
 }
 
 pickTimeDiv.addEventListener('click', bookingDropdown);
