@@ -36,12 +36,13 @@
     <section class="Make-Reservation">
       <form onsubmit="formValidation(event)"> 
         <div class="form-content">
-          <input class="input-name" type="text" name="name"  placeholder="Name">
-          <span id="name-error"> </span>
-    
-          <input class="input-email" type="email" placeholder="Email">
-          <span id="email-error"></span>
-
+          <div id="name-email-div">
+            <input class="input-name" type="text" name="name"  placeholder="Name">
+            <span class="error" id="name-error"> </span>
+            
+            <input class="input-email" type="email" placeholder="Email">
+            <span class="error" id="email-error"></span>       
+          </div>
           <div id="pick-date-div">
             <label for="reservation-date">Pick a date</label>
             <span id="date-error"></span>
