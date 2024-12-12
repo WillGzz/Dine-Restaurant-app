@@ -1,21 +1,30 @@
 const minuSign = document.getElementById('minus-sign');
 const plusSign = document.getElementById('plus-sign');
-const numPeopleSpan = document.querySelector('.number-of-people span');
+const numGuestSpan = document.querySelectorAll('.number-of-guest span');
+const amount = numGuestSpan[0];
 
 function countPeople(event) {
-    let numPeople = parseInt(numPeopleSpan.textContent); // Convert the text content to an integer
+    let numGuest = parseInt(amount.textContent); // Convert the text content to an integer
 
     if (event.target === minuSign) {
-        if (numPeople > 0) {
-            numPeople -= 1;
-            numPeopleSpan.textContent = numPeople; 
-            // console.log(numPeople);
+        if (numGuest > 0) {
+          numGuest -= 1;
+          amount.textContent = numGuest; 
+          if (numGuest === 0){
+            numGuestSpan.forEach(span =>{
+              span.classList.remove("number-of-guest-active");
+           });
+          }
         }
-    } else if (event.target === plusSign) {
-        if (numPeople >= 0) {
-            numPeople += 1;
-            numPeopleSpan.textContent = numPeople;
-            // console.log(numPeople);
+    
+      } else if (event.target === plusSign) {
+        if (numGuest >= 0) {
+          numGuest += 1;
+          amount.textContent = numGuest;
+          numGuestSpan.forEach(span =>{
+          span.classList.add("number-of-guest-active");
+        });
+          // console.log(numGuest);
         }
         
     }
@@ -95,17 +104,21 @@ function formValidation(event){
     const year = document.getElementById('input-year');
     const dateError = document.getElementById('date-error');
     const pickDateInputs = document.querySelectorAll("#pick-date-div input");
+    const pickDateLabel = document.querySelector("#pick-date-div label");
+    
 
     if (!month.value && !day.value && !year.value) {
+      pickDateLabel.style.color = "#B54949";
       dateError.textContent = "This field is required";
       setInputStyles(pickDateInputs); 
       isValid = false;
     } 
     else if(!month.value || !day.value || !year.value){
+      setInputStyles(pickDateInputs); 
       dateError.textContent = "This field is incomplete";
-
     }
     else{
+      pickDateLabel.style.color = "";
       resetInputStyles(pickDateInputs, dateError);
     }
 
@@ -114,21 +127,25 @@ function formValidation(event){
     const minute = document.getElementById('input-minute');
     const timeError = document.getElementById('time-error');
     const pickTimeInputs = document.querySelectorAll("#pick-time-div .time-inputs");
+    const pickTimeLabel = document.querySelector("#pick-time-div label");
 
     if (!hour.value && !minute.value) {
+      pickTimeLabel.style.color = "#B54949";
       timeError.textContent = "This field is required";
       setInputStyles(pickTimeInputs);
       isValid = false;
     } 
     else if(!hour.value || !minute.value){
+      setInputStyles(pickTimeInputs);
       timeError.textContent = "This field is incomplete";      
       isValid = false;
     }
     else{
        resetInputStyles(pickTimeInputs, timeError);
+       pickTimeLabel.style.color = "";
     }
     
-    if (!isValid) { //form is submittted if true
+    if (!isValid || amount.textContent === "0")  { //form is submittted if true
       event.preventDefault();
     }
   

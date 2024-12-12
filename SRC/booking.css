@@ -87,6 +87,7 @@ body{
   text-indent: 16px;
   caret-color: #9E7F66;
   margin-top: 30px;
+  color: var(--color, black);
 }
 
 .form-content .input-name::placeholder, .form-content .input-email::placeholder{
@@ -131,6 +132,7 @@ body{
   left: 8px;
   font-size: 1.1rem;
   text-indent: 15px;
+  color: var(--color, black);
 }
 
 #input-day::placeholder, #input-month::placeholder, #input-year::placeholder, #input-hour::placeholder, #input-minute::placeholder{
@@ -225,11 +227,16 @@ body{
   color: black;
 }
 
-.form-content .number-of-people{
+.form-content .number-of-guest{
   height: auto;
   width: auto;
   font-size: 1.2rem;
   font-weight: 600;
+  color: #8E8E8E;
+}
+
+.form-content .number-of-guest-active{
+  color: black;
 }
 
 div #minus-sign, div #plus-sign{
