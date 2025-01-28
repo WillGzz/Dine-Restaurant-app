@@ -31,7 +31,6 @@ function countPeople(event) {
 }
 
 
-
 const pickTimeDiv = document.getElementById('pick-time-div');
 const dropdownView = document.getElementsByClassName('dropdown')[0];
 const dropDownSelection = document.getElementById('input-time-of-day');
@@ -114,6 +113,7 @@ function formValidation(event){
       isValid = false;
     } 
     else if(!month.value || !day.value || !year.value){
+      pickDateLabel.style.color = "#B54949";
       setInputStyles(pickDateInputs); 
       dateError.textContent = "This field is incomplete";
     }
@@ -136,6 +136,7 @@ function formValidation(event){
       isValid = false;
     } 
     else if(!hour.value || !minute.value){
+      pickTimeLabel.style.color = "#B54949";
       setInputStyles(pickTimeInputs);
       timeError.textContent = "This field is incomplete";      
       isValid = false;
