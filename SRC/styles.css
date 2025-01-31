@@ -32,9 +32,7 @@ header .dining{
   /* height: 364px; */
   /* width: 327px; */
   top: 210px;
-  color: white;
-
-  
+  color: white; 
 }
 
 .dining img{
@@ -52,16 +50,15 @@ header .dining{
 /* test p */
 .dining p, .home p, .Menu p, .Events p{
   line-height: 26px;
-  
+  width: 327px; 
+  margin: 0 auto;
   font-size: 1rem;
 }
 
 .dining p{
+  width: 319px; 
   font-weight: 300;
   margin-bottom: 40px;
-  width: 85%;
-  left: 0px;
-  
 }
 
 .dining button, .Events button{
@@ -71,7 +68,7 @@ header .dining{
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  width: 65%;
+  width: 245px;
   border-style: solid;
   border-color: white;
   border-width: thin;
@@ -90,13 +87,8 @@ header .dining{
   border-color: black;
  }
 
-
- .home{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- 
+ main{
+ width: 100%;  
  }
 
 .home .enjoyable-place{
@@ -111,13 +103,8 @@ header .dining{
   
 }
 
-.home p{
-  font-size: 1rem;
-  text-align: center;
-}
-
 .home img, .Events img{
-  /* width: 90%;   */
+  width: 90.9%;  
   box-shadow: 0px 10px 25px 0px rgb(0, 0, 0, 0.5);  /*Horizontal size, vertical size , blur size, shadow spread size and color */
  
 }
@@ -129,6 +116,7 @@ header .dining{
 .Menu{
  background-color: black;
  color: white;
+ width: 100%;
  padding: 50px 0px;
  margin-top: 100px;
 }
@@ -140,6 +128,10 @@ header .dining{
 .Menu #salmon-img{
   margin-top: 50px;
 
+}
+
+.Menu img{
+width: 90.9%; ;
 }
 
 .salmon p, .beef p, .Chocolate p{
@@ -220,6 +212,7 @@ hr{
 }
 
 .Events button{
+  margin-top: 25px;
  margin-bottom: 100px;
 
 }
@@ -304,6 +297,19 @@ footer .content{
     height: auto; 
   }
 
+  .dining p{
+    width: 573px;
+    font-size: 1.250rem;
+  }
+
+  .dining h2{
+   font-size: 3rem;
+  }
+ 
+  .home img, .Events img{
+    width: 573px;  
+  
+  }
   /* .dining img, .dining p, .home p, .Menu p, .Events p{
      height: auto;
       
