@@ -297,22 +297,31 @@ footer .content{
     height: auto; 
   }
 
+  .dining h2{
+    font-size: 3rem;
+    line-height: 64px;
+  }
+  
   .dining p{
     width: 573px;
     font-size: 1.250rem;
+    line-height: 30px;
   }
-
-  .dining h2{
-   font-size: 3rem;
-  }
- 
-  .home img, .Events img{
-    width: 573px;  
   
+  .home h2, .Menu h2, .Reservation h2{
+    font-size: 3rem;
+    line-height: 48px;
+    
   }
-  /* .dining img, .dining p, .home p, .Menu p, .Events p{
-     height: auto;
-      
-  } */
 
+
+.home p, .Menu p, .Events p{
+    font-size: 1.250rem;
+    line-height: 30px;
+    width: 453px;
+  }
+
+  .Events p{
+   width: 470px;
+  }  
 } 

@@ -36,7 +36,16 @@
       <!-- The srcset attribute specifies the URL of the image to use in different situations, browsers that support higher resolution will use higher resolution img -->
       <!--2x means that the image has twice the resolution of a standard image, higher resolution means better clarity and sharpness -->
       <div class="enjoyable-place">
-        <img src="./SRC/images/homepage/enjoyable-place-mobile.jpg" srcset="./SRC/images/homepage/enjoyable-place-mobile@2x.jpg 2x" alt="hero">
+        <picture>
+          
+          <source media="(min-width:768px) and (max-width: 999px)" srcset="./SRC/images/homepage/enjoyable-place-tablet@2x.jpg 2x">
+          <source media="(min-width:768px) and (max-width: 999px)" srcset="./SRC/images/homepage/enjoyable-place-tablet.jpg">
+          
+          <source media="(min-width:999px)" srcset="./SRC/images/homepage/enjoyable-place-desktop@2x.jpg 2x">
+          <source media="(min-width:999px)" srcset="./SRC/images/homepage/enjoyable-place-desktop.jpg">
+          
+          <img src="./SRC/images/homepage/enjoyable-place-mobile.jpg" srcset="./SRC/images/homepage/enjoyable-place-mobile@2x.jpg 2x" alt="hero">
+        </picture>
          <br>
         <svg class="pattern-divider" xmlns="http://www.w3.org/2000/svg" width="71" height="7"><g fill="none" fill-rule="evenodd"><path fill="#9E7F66" d="M15 3h56v1H15z"/><circle cx="3.5" cy="3.5" r="3" stroke="#9E7F66"/></g></svg>
         <h2>Enjoyable place <br>for all the family</h2>
